@@ -1,0 +1,35 @@
+{
+  "name": "superdeep.link",
+  "version": "0.1.0",
+  "description": "deeplink redirects for protocol handlers",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bengreenier/superdeep.link.git"
+  },
+  "keywords": [
+    "deeplink"
+  ],
+  "author": "Ben Greenier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bengreenier/superdeep.link/issues"
+  },
+  "homepage": "https://github.com/bengreenier/superdeep.link#readme",
+  "dependencies": {
+    "finalhandler": "^0.5.1",
+    "router": "^1.1.4",
+    "serve-static": "^1.11.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "supertest": "^2.0.1"
+  },
+  "engines": {
+    "node": "^6.5.0"
+  }
+}
