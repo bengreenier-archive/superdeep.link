@@ -38,6 +38,16 @@ describe("server", () => {
             }), done)
     })
 
+    it("should block no protocols and no matched files", (done) => {
+        request(server)
+            .get('/blocked.unittest')
+            .expect(404)
+            .expect('Content-Type', /json/)
+            .expect(JSON.stringify({
+                error: "no protocol found"
+            }), done)
+    })
+
     it("should allow urns", (done) => {
         request(server)
             .get('/spotify:track:5mQNY6pTeSDl2doFB7uLbE')
