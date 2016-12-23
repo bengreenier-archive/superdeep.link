@@ -1,6 +1,6 @@
 {
   "name": "superdeep.link",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "deeplink redirects for protocol handlers",
   "main": "index.js",
   "scripts": {
