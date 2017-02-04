@@ -55,9 +55,18 @@ describe("server", () => {
             .expect(301, done)
     })
 
+    // this does not work on azure
     it("should allow uris", (done) => {
         request(server)
             .get('/protocolhandler://testvalue?passed=true')
+            .expect('Location', 'protocolhandler://testvalue?passed=true')
+            .expect(301, done)
+    })
+
+    // this is the uri behavior that works on azure
+    it("should allow uris with encoding", (done) => {
+        request(server)
+            .get('/protocolhandler/testvalue?passed=true')
             .expect('Location', 'protocolhandler://testvalue?passed=true')
             .expect(301, done)
     })

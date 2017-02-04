@@ -19,8 +19,21 @@ Redirects the caller (with a `301`) to the given location.
 
 With a uri:
 
+> Note: this fails on azure :frowning_face:
+
 ```
 GET http://superdeep.link/customProtocol://path/?to=thing HTTP/1.1
+
+HTTP/1.1 301 Moved Permanently
+Location: customProtocol://path/?to=thing
+```
+
+With an encoded uri:
+
+> Note: this works on azure :smile:
+
+```
+GET http://superdeep.link/customProtocol/path/?to=thing HTTP/1.1
 
 HTTP/1.1 301 Moved Permanently
 Location: customProtocol://path/?to=thing
